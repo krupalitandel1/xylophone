@@ -14,30 +14,36 @@ class XylophoneApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        appBar: AppBar(
+          title: Text('Xylophone Application'),
+        ),
         body: SafeArea(
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Center(
-                  child: TextButton(
-                onPressed: () {
-                  PlayMusic(1);
-                },
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.red),
+              Expanded(
+                child: TextButton(
+                  onPressed: () {
+                    PlayMusic(1);
+                  },
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.red),
+                  ),
+                  child: Text(""),
                 ),
-                child: Text(""),
-              )),
-              Center(
-                  child: TextButton(
-                onPressed: () {
-                  PlayMusic(2);
-                },
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.orange),
+              ),
+              Expanded(
+                child: TextButton(
+                  onPressed: () {
+                    PlayMusic(2);
+                  },
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.orange),
+                  ),
+                  child: Text(""),
                 ),
-                child: Text(""),
-              )),
-              Center(
+              ),
+              Expanded(
                   child: TextButton(
                 onPressed: () {
                   PlayMusic(3);
@@ -47,7 +53,7 @@ class XylophoneApp extends StatelessWidget {
                 ),
                 child: Text(""),
               )),
-              Center(
+              Expanded(
                   child: TextButton(
                 onPressed: () {
                   PlayMusic(4);
@@ -57,37 +63,42 @@ class XylophoneApp extends StatelessWidget {
                 ),
                 child: Text(""),
               )),
-              Center(
-                  child: TextButton(
-                onPressed: () {
-                  PlayMusic(5);
-                },
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.green[900]),
+              Expanded(
+                child: TextButton(
+                  onPressed: () {
+                    PlayMusic(5);
+                  },
+                  style: ButtonStyle(
+                    backgroundColor:
+                        MaterialStateProperty.all(Colors.green[900]),
+                  ),
+                  child: Text(""),
                 ),
-                child: Text(""),
-              )),
-              Center(
-                  child: TextButton(
-                onPressed: () {
-                  PlayMusic(6);
-                },
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.blue[600]),
+              ),
+              Expanded(
+                child: TextButton(
+                  onPressed: () {
+                    PlayMusic(6);
+                  },
+                  style: ButtonStyle(
+                    backgroundColor:
+                        MaterialStateProperty.all(Colors.blue[600]),
+                  ),
+                  child: Text(""),
                 ),
-                child: Text(""),
-              )),
-              Center(
-                  child: TextButton(
-                onPressed: () {
-                  PlayMusic(7);
-                },
-                style: ButtonStyle(
-                  backgroundColor:
-                      MaterialStateProperty.all(Colors.purple[800]),
+              ),
+              Expanded(
+                child: TextButton(
+                  onPressed: () {
+                    PlayMusic(7);
+                  },
+                  style: ButtonStyle(
+                    backgroundColor:
+                        MaterialStateProperty.all(Colors.purple[800]),
+                  ),
+                  child: Text(""),
                 ),
-                child: Text(""),
-              )),
+              ),
             ],
           ),
         ),
